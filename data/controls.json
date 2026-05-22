@@ -1,0 +1,88 @@
+{
+  "controls": [
+    {
+      "id": "mfa",
+      "name": "Multi-Factor Authentication (MFA)",
+      "category": "Identity & Access",
+      "description": "Enforces a second authentication factor (push, FIDO2, TOTP) for user and admin sign-ins, blocking the vast majority of credential-stuffing, password-spray, and phishing-based account takeover attacks.",
+      "default_reduction_pct": 0.99,
+      "default_annual_cost_per_user": 6.0,
+      "decay_rate": 0.05,
+      "sources": [
+        "Microsoft Identity Security Report: MFA blocks over 99.9% of automated account compromise attacks",
+        "CISA Multi-Factor Authentication Guidance (2022): MFA makes users 99% less likely to be hacked",
+        "Verizon DBIR 2024: 68% of breaches involve a non-malicious human element, with stolen credentials the top initial action"
+      ]
+    },
+    {
+      "id": "edr",
+      "name": "Endpoint Detection & Response (EDR)",
+      "category": "Endpoint Security",
+      "description": "Continuously monitors endpoints for malicious behavior, isolates compromised hosts, and shortens attacker dwell time through automated detection and response workflows.",
+      "default_reduction_pct": 0.35,
+      "default_annual_cost_per_user": 75.0,
+      "decay_rate": 0.10,
+      "sources": [
+        "Ponemon Institute / IBM Cost of a Data Breach Report 2024: organizations using EDR/XDR reduced average breach cost by USD 1.9M (~30-40% lower than peers)",
+        "MITRE Engenuity ATT&CK Evaluations: leading EDR tools detect 85-95% of in-scope adversary techniques",
+        "Mandiant M-Trends 2024: median global dwell time reduced to 10 days, driven largely by EDR-enabled detection"
+      ]
+    },
+    {
+      "id": "iam_hardening",
+      "name": "IAM Hardening (PAM, Least Privilege, JIT)",
+      "category": "Identity & Access",
+      "description": "Implements privileged access management, just-in-time elevation, role-based access reviews, and least-privilege enforcement to contain blast radius from compromised accounts.",
+      "default_reduction_pct": 0.45,
+      "default_annual_cost_per_user": 40.0,
+      "decay_rate": 0.07,
+      "sources": [
+        "NIST SP 800-53 Rev. 5 (AC-2, AC-6, IA-2): privileged access and least-privilege controls baseline",
+        "Forrester Wave PAM 2023: PAM deployments reduce privileged-account-related incidents by ~50%",
+        "Verizon DBIR 2024: misuse of privileges and credentials present in over 30% of breaches"
+      ]
+    },
+    {
+      "id": "awareness_training",
+      "name": "Security Awareness Training",
+      "category": "Human Risk",
+      "description": "Phishing simulations, role-based modules, and reinforcement campaigns to reduce user susceptibility to social engineering, business email compromise, and unsafe data handling.",
+      "default_reduction_pct": 0.30,
+      "default_annual_cost_per_user": 18.0,
+      "decay_rate": 0.15,
+      "sources": [
+        "Verizon DBIR 2024: the human element is involved in 68% of breaches; phishing remains a top initial vector",
+        "KnowBe4 Phishing by Industry Benchmarking Report 2024: phish-prone percentage drops from ~34% to ~5% after 12 months of training",
+        "Proofpoint State of the Phish 2024: organizations with mature training programs see 60%+ fewer successful phishing incidents"
+      ]
+    },
+    {
+      "id": "cspm",
+      "name": "Cloud Security Posture Management (CSPM)",
+      "category": "Cloud Security",
+      "description": "Continuously assesses cloud accounts (AWS, Azure, GCP) for misconfigurations, exposed assets, and policy drift, and remediates against CIS Benchmarks and NIST 800-53 controls.",
+      "default_reduction_pct": 0.50,
+      "default_annual_cost_per_user": 30.0,
+      "decay_rate": 0.08,
+      "sources": [
+        "Gartner Innovation Insight for CSPM: through 2025, 99% of cloud security failures will be the customer's fault, primarily misconfiguration",
+        "IBM X-Force Cloud Threat Landscape 2024: cloud misconfigurations cited in roughly two-thirds of cloud-environment breaches",
+        "NIST SP 800-53 Rev. 5 (CM-2, CM-6, CM-7): configuration management baseline for cloud workloads"
+      ]
+    },
+    {
+      "id": "dlp",
+      "name": "Data Loss Prevention (DLP)",
+      "category": "Data Security",
+      "description": "Classifies sensitive data and enforces policy on email, endpoint, and cloud egress channels to prevent accidental and malicious exfiltration of regulated or proprietary information.",
+      "default_reduction_pct": 0.30,
+      "default_annual_cost_per_user": 35.0,
+      "decay_rate": 0.10,
+      "sources": [
+        "Ponemon Institute / IBM Cost of a Data Breach Report 2024: average cost of a data breach reached USD 4.88M, with exfiltration driving the largest cost component",
+        "Verizon DBIR 2024: miscellaneous errors and privilege misuse account for a significant share of confirmed data disclosure",
+        "NIST SP 800-53 Rev. 5 (SC-7, SI-4, AC-4): boundary protection and information flow enforcement controls"
+      ]
+    }
+  ]
+}
